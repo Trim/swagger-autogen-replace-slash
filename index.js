@@ -6,9 +6,9 @@ const helloRouter = express.Router();
 
 helloRouter.get('/', (request, response, next) => {
   // With this line, swagger will return empty paths
-  // const test_id = ''.replace(/\//, '/');
+  const test_id = ''.replace(/\//, '/');
   // With this workaround, swagger will return /helllo in paths
-  const test_id = ''.replace(/\//, String.fromCharCode(0x002F));
+  // const test_id = ''.replace(/\//, String.fromCharCode(0x002F));
   response.status.code = 200;
   response.send('world');
   next();
